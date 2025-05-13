@@ -19,5 +19,9 @@ user.mail='satyam16072001@gmail.com';
 user.gretting=function(){
     console.log('hello everyone i"m here.');
 }
- console.log(user.gretting());
+user.gettingTwo=function(){
+    console.log(`"helllo how are you. your mail id is" ${this.mail}`);
+}
+   console.log(user.gretting());
+//  console.log(user.gettingTwo());
 // console.log(user.gretting);
