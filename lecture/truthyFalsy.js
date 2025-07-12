@@ -7,3 +7,5 @@
 let price = 200;
 
 price <= 200 ? console.log("price is less or equal to 200") : console.log("greater than 200")
+
+console.dir(document)
