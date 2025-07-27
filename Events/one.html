@@ -62,7 +62,7 @@
 <body style="background-color: #414141 ; color:aquamarine">
     <div class="content">
         <h1>Amazing image</h1>
-        <ul class="image-list">
+        <ul class="image-list" id="image">
             <li>
                 <img id="owl" alt="photoshop" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAKtCyZSp5YFWpTM2RiWbED_M3GQBHAHRL3w&s ">
             </li>
@@ -84,6 +84,33 @@
 
 </body>
 <script>
+    //document.querySelector('#batman').onclick = function() {
+    // alert('batman');
+    //}
+
+    // attachEvent()
+    // jQuery- on
+
+    // event e --> type, timestamp, defaultPrevent, target, srcElement
+    // currentTarget, clientX,clientY, screnX,screenY, keyCode
+
+    // document.getElementById('batman').addEventListener('click', function() {
+    // alert('batman picture is clicked ')
+    // })
+
+    document.getElementById('batman').addEventListener('click', function(e) {
+        console.log("pictue")
+    }, false)
+    document.getElementById('image').addEventListener('click', function(e) {
+        console.log("PICTURE IS CLICKED ")
+    }, false)
+
+
+
+
+    //
 </script>
+
+</html>
 
 </html>
