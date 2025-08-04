@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Deepdive into Async</h1>
+    <button id="stop">Stop</button><br><br>
+    <button id="start">Start</button>
+</body>
+<script>
+    //setInterval(constiniousWorking, 2000)
+    let intervalId
+    document.querySelector('#start').addEventListener('click', function() {
+        intervalId = setInterval(function() {
+            console.log(Date.now())
+        }, 1000, 'satyam')
+    }, false)
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearInterval(intervalId, 1000);
+        intervalId = null
+    })
+</script>
+
+</html>

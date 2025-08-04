@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Aysnc learning </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const changeContext = function() {
+        document.querySelector('h1').innerHTML = "lfjslfs "
+    }
+    const sayMyName = function() {
+
+        console.log('satyam kumar ')
+    }
+    const changeMe = setTimeout(changeContext, 2000) //sayMyName is reference not call
+    document.querySelector('#stop').addEventListener('click', function(e) {
+        clearTimeout(changeMe)
+        console.log('stop changing ')
+    })
+</script>
+
+</html>

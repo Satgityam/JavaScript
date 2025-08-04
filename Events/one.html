@@ -64,7 +64,7 @@
         <h1>Amazing image</h1>
         <ul class="image-list" id="image">
             <li>
-                <img id="owl" alt="photoshop" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAKtCyZSp5YFWpTM2RiWbED_M3GQBHAHRL3w&s ">
+                <img id="owl" alt="photoshop" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAKtCyZSp5YFWpTM2RiWbED_M3GQBHAHRL3w&s " onclick="console.log(event)">
             </li>
             <li>
                 <img id="spiderman " alt=" " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe7RGwzzAwM-2oLYFEg38s1xckUhrVNvy4TA&s ">
@@ -84,31 +84,18 @@
 
 </body>
 <script>
-    //document.querySelector('#batman').onclick = function() {
-    // alert('batman');
-    //}
-
-    // attachEvent()
-    // jQuery- on
-
-    // event e --> type, timestamp, defaultPrevent, target, srcElement
-    // currentTarget, clientX,clientY, screnX,screenY, keyCode
-
-    // document.getElementById('batman').addEventListener('click', function() {
-    // alert('batman picture is clicked ')
-    // })
-
-    document.getElementById('batman').addEventListener('click', function(e) {
-        console.log("pictue")
-    }, false)
-    document.getElementById('image').addEventListener('click', function(e) {
-        console.log("PICTURE IS CLICKED ")
-    }, false)
+    document.querySelector('#image').addEventListener('click', function(e) {
+        // console.log(e.target.parentNode)
+        const removeIt = e.target.parentNode
+            //removeIt.parentNode.removeChild(removeIt);
+            //removeIt.remove()
+            //removeIt.parentNode.appendChild(removeIt)
+        const newLi = document.createElement('li')
+        newLi.textContent = "new element is created "
+        removeIt.parentNode.appendChild(newLi)
 
 
-
-
-    //
+    })
 </script>
 
 </html>
