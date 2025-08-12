@@ -14,7 +14,7 @@ promiseOne.then(function() {
 })
 
 
-//
+
 new Promise(function(resolve, reject) {
     setTimeout(function() {
         console.log('Asyn2 task is complited');
@@ -28,7 +28,7 @@ new Promise(function(resolve, reject) {
 })
 
 
-//
+
 const promiseThree = new Promise(function(resolve, reject) {
     setTimeout(function() {
         console.log('Asyn task three');
@@ -42,13 +42,21 @@ promiseThree.then(function(user) {
 
 })
 
+
 const promiseFour = new Promise(function(resolve, reject) {
-    let error = true;
-    if (!error) {
-        resolve({ userName: 'satyamKumar', mail: "kumar@gmial.com" })
-    } else {
-        log
-    }
-
-
+    setTimeout(function() {
+        let error = true;
+        if (!error) {
+            resolve({ name: 'satyam kumar', mail: 'satyam@gmail.com' })
+        } else {
+            reject('Error: something went wrong')
+        }
+    }, 1000)
 })
+
+promiseFour.then((user) => {
+    console.log(user);
+    return user.name
+}).then((username) => {
+    console.log(username);
+}).catch((error) => console.log(error))
