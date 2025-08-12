@@ -60,3 +60,21 @@ promiseFour.then((user) => {
 }).then((username) => {
     console.log(username);
 }).catch((error) => console.log(error))
+
+// promiseFive
+
+const promiseFive = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+
+
+        resolve({ language: 'javascript', code: 'js' })
+
+    }, 1000)
+})
+
+
+async function consumePromiseFive() {
+    const response = await promiseFive
+    console.log(response);
+
+}
